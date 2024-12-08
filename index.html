@@ -12,10 +12,12 @@
     ></script>
     <title>Zoom</title>
   </head>
-  <body class="lg:bg-slate-100 flex flex-col min-h-screen">
+  <body
+    class="overflow-auto bg-white lg:bg-slate-100 flex flex-col min-h-screen"
+  >
     <div class="Homepage">
       <header
-        class="bg-white text-black lg:bg-transparent lg:text-white fixed top-0 left-0 w-full z-50 shadow-md"
+        class="text-black lg:text-white bg-white fixed top-0 left-0 w-full shadow-md z-50"
       >
         <nav
           class="max-w-screen-xl mx-auto p-4 lg:flex flex-row justify-between items-end"
@@ -26,15 +28,35 @@
           <!-- Meny för större skärmar -->
           <ul class="hidden lg:flex space-x-4">
             <li>
-              <a href="#" class="hover:text-gray-300">
+              <a href="#" class="text-costom-blue700 hover:text-gray-300">
                 <i class="fa-solid fa-magnifying-glass mr-2"></i> Sök
               </a>
             </li>
-            <li><a href="#" class="hover:text-gray-300">Hem</a></li>
-            <li><a href="#" class="hover:text-gray-300">Produkter</a></li>
-            <li><a href="#" class="hover:text-gray-300">Priser</a></li>
-            <li><a href="#" class="hover:text-gray-300">Hjälp</a></li>
-            <li><a href="#" class="hover:text-gray-300">Logga in</a></li>
+            <li>
+              <a href="#" class="text-costom-blue700 hover:text-gray-300"
+                >Hem</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-costom-blue700 hover:text-gray-300"
+                >Produkter</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-costom-blue700 hover:text-gray-300"
+                >Priser</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-costom-blue700 hover:text-gray-300"
+                >Hjälp</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-costom-blue700 hover:text-gray-300"
+                >Logga in</a
+              >
+            </li>
           </ul>
 
           <!-- dolt på skärmar som är 1024px eller större alltså lg+ -->
@@ -43,55 +65,173 @@
             <div class="flex space-x-4 ml-auto">
               <p class="p-2 text-black">Delta</p>
               <p class="p-2 text-black">Värd</p>
-              <button>
+              <button class="bg-white">
                 <i class="fa-solid fa-bars"></i>
               </button>
             </div>
           </div>
         </nav>
       </header>
-
       <div
         class="welcomeZoom font-sans text-2xl md:text-5xl lg:text-6xl flex flex-col mt-32 sm:mt-32 mx-auto"
       >
-        <h2 class="text-center text-custom-blue700 font-mono">
+        <h2 class="text-black text-center text-custom-blue700 font-mono">
           Välkommen till
           <span class="text-costom-blue400">Zoom</span>
         </h2>
       </div>
 
-      <div class="flex flex-col">
-        <!-- items-start -->
-        <section class="absolute top-1/4 left-28">
-          <h2
-            class="font-extrabold tracking-wide text-2xl sm:text-4xl lg:text-5xl drop-shadow-lg rounded-lg"
-          >
-            Hitta allt <br />
-            du behöver, <br />när du behöver <br />
-            det med <br /><a
-              class="text-costom-blue600 drop-shadow-lg font-extrabold rounded-lg"
-              target="_blank"
-              >AI COMPANION</a
-            >
-          </h2>
-          <p
-            class="py-4 text-gray-600 font-bold text-sm sm:text-base lg:text-lg"
-          >
-            Med Zoom får du alla verktyg du behöver för att samarbeta, <br />
-            kommunicera och skapa – på ett smidigt och effektivt sätt. <br />
-            Oavsett om du är på kontoret eller arbetar på distans, <br />
-            gör Zoom det enkelt att hålla möten,<br />
-            dela idéer och få jobbet gjort snabbare.
+      <!-- Popup (hidden by default) -->
+      <div
+        id="popup"
+        class="popup hidden bg-white border-2 px-8 py-12 rounded-lg w-80 max-w-sm mx-auto fixed top-1/4 left-1/2 transform -translate-x-1/2 z-50 opacity-100"
+      >
+        <div class="popup-content p-6">
+          <i
+            id="closePopupBtn"
+            class="fa-solid fa-xmark text-black cursor-pointer absolute p-1 top-0 right-0 m-0"
+          ></i>
+          <div class="absolute top-2 py-3">
+            <h1 class="text-black text-2xl">Gör som alla andra</h1>
+            <h3 class="text-gray-600">Signa upp dig för zoom idag!</h3>
+          </div>
+          <p class="text-costom-green800 py-4">
+            Zoom erbjuder en
+            <span class="text-costom-green600">enkel</span> och
+            <span class="text-costom-green600">säker</span> plattform för
+            effektiva möten och samarbeten, <br />oavsett var du eller ditt team
+            befinner er. <br />
+            <span class="text-costom-green600"
+              >Tryck på knappen för att joina idag!!
+            </span>
           </p>
           <button
-            class="bg-costom-blue500 hover:bg-costom-blue200 text-white font-bold py-2 rounded-full"
+            class="bg-costom-green400 text-white px-4 py-2 rounded w-auto h-auto absolute bottom-3 left-15"
           >
-            Registrera dig gratis
+            Börja redan idag!
           </button>
-          <button></button>
+        </div>
+      </div>
+      <!-- ------------SECTION 1------------ -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16 px-4">
+        <figure
+          class="flex flex-col justify-center items-center hidden sm:block"
+        >
+          <img
+            class="object-contain h-32 sm:h-48 w-32 sm:w-48 py-2 md:w-auto"
+            src="/img/zoomHomeP.jpg"
+            alt="bild på en kvinna"
+          />
+          <img
+            class="object-contain h-32 sm:h-48 w-32 sm:w-48 py-2 md:w-auto"
+            src="/img/zoompg2.jpg"
+            alt="två personer vid en dator"
+          />
+          <img
+            class="object-contain h-32 sm:h-48 w-32 sm:w-48 py-2 md:w-auto"
+            src="/img/zoom3.jpg"
+            alt=" "
+          />
+        </figure>
+        <div class="flex flex-col justify-center items-center">
+          <!-- items-start -->
+          <section>
+            <h2
+              class="font-extrabold tracking-wide text-2xl sm:text-4xl lg:text-5xl drop-shadow-lg rounded-lg text-black"
+            >
+              Hitta allt <br />
+              du behöver, <br />när du behöver <br />
+              det med <br /><a
+                class="text-costom-blue600 drop-shadow-lg font-extrabold rounded-lg"
+                target="_blank"
+                >AI COMPANION</a
+              >
+            </h2>
+            <p
+              class="leading-relaxed py-4 text-gray-600 font-bold text-sm sm:text-base lg:text-lg"
+            >
+              Med Zoom får du alla verktyg du behöver för att samarbeta, <br />
+              kommunicera och skapa – på ett smidigt och effektivt sätt. <br />
+              Oavsett om du är på kontoret eller arbetar på distans, <br />
+              gör Zoom det enkelt att hålla möten,<br />
+              dela idéer och få jobbet gjort snabbare.
+            </p>
+            <button
+              class="bg-costom-blue500 hover:bg-costom-blue200 text-white font-bold py-2 rounded-full"
+            >
+              Registrera dig gratis
+            </button>
+          </section>
+        </div>
+        <section class="flex flex-col space-y-6 items-center group">
+          <!-- Text och information bredvid bilden -->
+          <div class="flex flex-col items-center">
+            <img
+              src="./img/Jasmine.jpg"
+              class="w-16 h-16 rounded-full mr-4"
+              alt="Spencer Sharp"
+            />
+            <h4 class="font-bold text-black text-lg">Spencer Sharp</h4>
+
+            <p class="text-gray-600 text-sm">
+              "Zoom har gjort mitt arbete
+              <span class="text-gray-400">enklare</span>, mina möten <br />
+              <span class="text-gray-400">effektivare</span> och mitt liv mer
+              sammanlänkat.""
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="./img/leyla.jpg"
+              class="w-16 h-16 rounded-full mr-4"
+              alt=""
+            />
+            <h4 class="font-bold text-black text-lg">Leyla Mich</h4>
+
+            <p class="text-gray-600 text-sm">
+              "Zoom har gett mig friheten att
+              <span class="text-gray-400">arbeta var som helst</span>, <br />
+              och det har förändrat mitt sätt att
+              <span class="text-gray-400">samarbeta</span> ."
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="/img/nicklas.webp"
+              class="w-16 h-16 rounded-full mr-4"
+              alt=""
+            />
+            <h4 class="font-bold text-black text-lg">Nicklas Pettersson</h4>
+
+            <p class="text-gray-600 text-sm">
+              "Zoom har gjort mina möten
+              <span class="text-gray-400">enklare</span>, snabbare och <br />
+              mer produktiva ett måste för alla som vill
+              <span class="text-gray-400">samarbeta effektivt</span>!"
+            </p>
+          </div>
+        </section>
+      </div>
+      <!-- SECTION 2------------------- -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16 px-4">
+        <!-- Section 1 -->
+        <section class="bg-black flex flex-col justify-center items-center">
+          <h2 class="text-white"></h2>
+          <p class="text-white">Content for section 1.</p>
+        </section>
+        <!-- Section 2 -->
+        <section class="bg-slate-500 flex flex-col justify-center items-center">
+          <h2 class="text-white">Section 2</h2>
+          <p class="text-white">Content for section 2.</p>
+        </section>
+        <!-- Section 3 -->
+        <section class="bg-slate-900 flex flex-col justify-center items-center">
+          <h2 class="text-white">Section 3</h2>
+          <p class="text-white">Content for section 3.</p>
         </section>
       </div>
     </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
