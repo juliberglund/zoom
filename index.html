@@ -59,7 +59,7 @@
             </li>
           </ul>
 
-          <!-- dolt på skärmar som är 1024px eller större alltså lg+ -->
+          <!-- DOLT STORA skärmar som är 1024px eller större alltså lg+ -->
           <div class="lg:hidden flex justify-between items-start w-full p-4">
             <h2 class="text-costom-blue600 font-bold text-4xl p-2">Zoom</h2>
             <div class="flex space-x-4 ml-auto">
@@ -72,14 +72,32 @@
           </div>
         </nav>
       </header>
-      <div
-        class="welcomeZoom font-sans text-2xl md:text-5xl lg:text-6xl flex flex-col mt-32 sm:mt-32 mx-auto"
+
+      <section
+        class="hero bg-no-repeat bg-cover bg-center text-white py-40 px-4 relative"
+        style="
+          background-image: url(&quot;/img/backgroundColor.jpg&quot;);
+          min-height: 400px;
+        "
       >
-        <h2 class="text-black text-center text-custom-blue700 font-mono">
-          Välkommen till
-          <span class="text-costom-blue400">Zoom</span>
-        </h2>
-      </div>
+        <div class="absolute inset-0 bg-costom-blue500 opacity-20"></div>
+        <!-- Opacitet justerad -->
+        <div class="relative z-10 text-center">
+          <h1
+            class="text-4xl sm:text-5xl font-extrabold leading-tight text-costom-blue600"
+          >
+            Välkommen till <span class="text-costom-blue700">Zoom</span>
+          </h1>
+          <p class="mt-4 text-lg text-costom-blue500 sm:text-xl">
+            Effektiva möten och samarbete, var som helst, när som helst.
+          </p>
+          <a
+            href="#signup"
+            class="mt-6 inline-block bg-costom-blue700 text-white py-2 px-6 rounded-full text-lg hover:bg-costom-blue500 transition duration-300"
+            >Börja idag</a
+          >
+        </div>
+      </section>
 
       <!-- Popup (hidden by default) -->
       <div
@@ -148,7 +166,7 @@
               >
             </h2>
             <p
-              class="leading-relaxed py-4 text-gray-600 font-bold text-sm sm:text-base lg:text-lg"
+              class="leading-relaxed py-4 text-gray-600 font-bold text-sm sm:text-base tracking-wider lg:text-lg"
             >
               Med Zoom får du alla verktyg du behöver för att samarbeta, <br />
               kommunicera och skapa – på ett smidigt och effektivt sätt. <br />
@@ -212,17 +230,50 @@
           </div>
         </section>
       </div>
-      <!-- SECTION 2------------------- -->
+      <!-- COLUMN SECTION 2------------------- -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16 px-4">
         <!-- Section 1 -->
-        <section class="bg-black flex flex-col justify-center items-center">
-          <h2 class="text-white"></h2>
-          <p class="text-white">Content for section 1.</p>
+        <section
+          class="bg-costom-blue900 flex flex-col justify-center items-center py-10 px-5"
+        >
+          <h2
+            class="text-6xl font-extrabold text-white tracking-wide shadow-xl animate-pulse"
+          >
+            Zoom
+          </h2>
+          <p class="text-gray-300 py-4">
+            Möten utan hinder, obegränsad kontakt
+          </p>
+          <div class="py-2">
+            <button
+              type="button"
+              class="bg-costom-blue200 w-52 hover:text-blue-400"
+            >
+              Zoom workplace
+            </button>
+          </div>
+          <div class="py-2">
+            <button class="bg-costom-blue300 w-52 hover:text-blue-400">
+              AI Companion
+            </button>
+          </div>
+          <div class="py-2">
+            <button class="bg-costom-blue400 w-52 hover:text-blue-600">
+              Företagstjänster
+            </button>
+          </div>
+          <div class="py-2">
+            <button class="bg-costom-blue500 w-52 hover:text-blue-800">
+              Utvecklare eko system
+            </button>
+          </div>
+          <img src="/img/rb_91004 (1).png" alt="" />
         </section>
         <!-- Section 2 -->
-        <section class="bg-slate-500 flex flex-col justify-center items-center">
-          <h2 class="text-white">Section 2</h2>
-          <p class="text-white">Content for section 2.</p>
+        <section
+          class="bg-costom-blue900 flex flex-col justify-center items-center"
+        >
+          <img src="/img/zoomWorkplace.png" alt="" />
         </section>
         <!-- Section 3 -->
         <section class="bg-slate-900 flex flex-col justify-center items-center">
@@ -230,6 +281,7 @@
           <p class="text-white">Content for section 3.</p>
         </section>
       </div>
+      <footer>Footer</footer>
     </div>
 
     <script type="module" src="/src/main.js"></script>
