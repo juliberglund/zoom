@@ -149,7 +149,7 @@
       <!-- ------------SECTION 1------------ -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16 px-4">
         <figure
-          class="flex flex-col justify-center items-center hidden sm:block"
+          class="flex flex-col justify-center items-center hidden lg:block"
         >
           <img
             class="object-contain h-32 sm:h-48 w-32 sm:w-48 py-2 md:w-auto"
@@ -169,7 +169,7 @@
         </figure>
         <div class="flex flex-col justify-center items-center">
           <!-- items-start -->
-          <section>
+          <section class="flex flex-col items-center text-center">
             <h2
               class="font-extrabold tracking-wide text-2xl sm:text-4xl lg:text-5xl drop-shadow-lg rounded-lg text-black"
             >
@@ -184,11 +184,10 @@
             <p
               class="leading-relaxed py-4 text-gray-600 font-bold text-sm sm:text-base tracking-wider lg:text-lg"
             >
-              Med Zoom får du alla verktyg du behöver för att samarbeta, <br />
-              kommunicera och skapa – på ett smidigt och effektivt sätt. <br />
-              Oavsett om du är på kontoret eller arbetar på distans, <br />
-              gör Zoom det enkelt att hålla möten,<br />
-              dela idéer och få jobbet gjort snabbare.
+              Med Zoom får du alla verktyg du behöver för att samarbeta,
+              kommunicera och skapa på ett smidigt och effektivt sätt. Oavsett
+              om du är på kontoret eller arbetar på distans, gör Zoom det enkelt
+              att hålla möten, dela idéer och få jobbet gjort snabbare.
             </p>
             <button
               class="bg-costom-blue500 hover:bg-costom-blue200 text-white font-bold py-2 rounded-full"
@@ -197,7 +196,7 @@
             </button>
           </section>
         </div>
-        <section class="flex flex-col space-y-6 items-center group">
+        <section class="flex flex-col space-y-6 items-center">
           <!-- Text och information bredvid bilden -->
           <div class="flex flex-col items-center">
             <img
@@ -293,10 +292,10 @@
         </section>
         <!-- Section 3 -->
         <section class="bg-slate-900 flex flex-col justify-center items-center">
-          <h2 class="text-white text-5xl font-extrabold">
+          <h2 class="text-white text-4xl font-extrabold">
             <span class="text-blue-400 animate-pulse">Zoom</span>Workplace
           </h2>
-          <p class="text-white py-4">
+          <p class="text-white py-4 px-4">
             Gör sammarbetet i hybridteamet mer meningsfullt <br />
             med moderna sammarbetslösningar. <a href="">Läs mer här.</a>
           </p>
@@ -327,7 +326,17 @@
           </div>
         </section>
       </div>
-      <footer class="">Footer</footer>
+      <footer class="py-10 pt-10 bg-white">
+        <div class="flex flex-col justify-center items-center ml-10">
+          <h2 class="text-costom-blue600 text-4xl">Redo att komma igång?</h2>
+          <div class="py-10 space-y-4 justify-center items-center">
+            <button class="bg-costom-blue400 text-center border-black">
+              Registrera dig här, det är gratis
+            </button>
+            <button class="border-black text-center">Planer och priser</button>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script type="module" src="/src/main.js"></script>
